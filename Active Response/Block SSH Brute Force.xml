@@ -1,0 +1,12 @@
+<command>
+  <name>firewalldrop</name>
+  <executable>firewalldrop.sh</executable>
+  <timeout_allowed>yes</timeout_allowed>
+</command>
+
+<active-response>
+  <disabled>no</disabled>
+  <command>firewalldrop</command>
+  <location>all</location>
+  <rules_id>5712</rules_id> 
+</active-response>
