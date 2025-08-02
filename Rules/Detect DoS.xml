@@ -1,0 +1,15 @@
+<group name="dos_attack,pfsense,">
+  <rule id="877010" level="12">
+    <if_sid>5716</if_sid>
+    <description>Potential Denial of Service (DoS) Attack Detected</description>
+    <frequency>30</frequency>
+    <timeframe>60</timeframe>
+    <same_source_ip />
+    <alert_by_email>yes</alert_by_email>
+    <action>firewalldrop</action>
+    <mitre>
+      <id>T1499</id>
+      <tactic>Impact</tactic>
+    </mitre>
+  </rule>
+</group>

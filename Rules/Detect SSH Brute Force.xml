@@ -1,0 +1,18 @@
+<group name="authentication_failed,">
+  <rule id="5712" level="10">
+    <decoded_as>json</decoded_as>
+    <field name="system.auth.subtype">sshd</field>
+    <field name="eventdata.reason">Invalid user</field>
+    <description>SSH brute-force attack detected - too many failed logins</description>
+    <group>syslog,authentication_failed,</group>
+    <frequency>5</frequency>
+    <timeframe>60</timeframe>
+    <same_source_ip />
+    <mitre>
+      <id>T1110</id>
+      <tactic>Credential Access</tactic>
+    </mitre>
+    <alert_by_email>yes</alert_by_email>
+    <action>firewalldrop</action>
+  </rule>
+</group>
